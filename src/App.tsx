@@ -1,9 +1,19 @@
+import { Routes, Route } from "react-router-dom";
+import { routes } from "./routes";
 function App() {
   return (
     <div className="App">
-      <h1>
-        Hello my name is Arad and this is my first react typescript project
-      </h1>
+      <Routes>
+        {routes.map((route) => {
+          return (
+            <Route
+              path={route.path}
+              element={route.component}
+              key={route._id}
+            />
+          );
+        })}
+      </Routes>
     </div>
   );
 }
