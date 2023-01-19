@@ -1,10 +1,10 @@
-import React from "react";
+import PageLayout from "../../components/PageLayout";
 
 const Destination = () => {
   return (
-    <div>
+    <PageLayout>
       <h1>Destination</h1>
-    </div>
+    </PageLayout>
   );
 };
 

@@ -8,19 +8,12 @@ interface PageProps{
 }
 
 
-const Container = styled.div`
-background:black;
-color:white;
-width:100%;
-height:100vh;
-padding:2rem;
-`
 const PageLayout = (props:PageProps) => {
     return (
-        <Container>
+        <div>
             <Navbar/>
             {props.children}
-        </Container>
+        </div>
     );
 };
 

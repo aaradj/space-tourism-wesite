@@ -1,10 +1,10 @@
-import React from 'react';
+import PageLayout from "../../components/PageLayout";
 
 const Technology = () => {
     return (
-        <div>
+        <PageLayout>
             <h1>Technology</h1>
-        </div>
+        </PageLayout>
     );
 };
 

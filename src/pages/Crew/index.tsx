@@ -1,8 +1,9 @@
+import PageLayout from "../../components/PageLayout";
 const Crew = () => {
   return (
-    <div>
+    <PageLayout>
       <h1>Crew</h1>
-    </div>
+    </PageLayout>
   );
 };
 

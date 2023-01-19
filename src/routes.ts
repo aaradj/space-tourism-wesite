@@ -5,7 +5,7 @@ interface IRoute {
   authorize?: "admin" | "guest";
 }
 
-export const routes:IRoute[] = [
+export const routes: IRoute[] = [
   {
     path: "/",
     elemet: "Home",

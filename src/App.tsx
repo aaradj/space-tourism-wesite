@@ -1,21 +1,22 @@
-
 import { Routes, Route } from "react-router-dom";
-import PageLayout from "./components/PageLayout";
-import { routes } from "./routes";
+
+//Pages
+import Crew from "./pages/Crew";
+import Destination from "./pages/Destination";
+import Home from "./pages/Home";
+import Technology from "./pages/Technology";
+
 const App = () => {
   return (
-    <div>
-      <PageLayout>
+    <>
       <Routes>
-      {routes.map((route) => {
-        route.elemet.toUpperCase();
-        return (
-          <Route key={route._id} path={route.path} element={route.elemet} />
-        )
-        })}
-        </Routes>
-        </PageLayout>
-    </div>
+        <Route path="/" element={<Home/>} />
+        <Route path="/destination" element={<Destination/>} />
+        <Route path="/crew" element={<Crew/>} />
+        <Route path="/technology" element={<Technology/>} />
+        <Route path="*" element={<Home/>} />
+      </Routes>
+    </>
   );
 };
 

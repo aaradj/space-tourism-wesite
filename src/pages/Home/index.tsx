@@ -1,8 +1,14 @@
+import PageLayout from "../../components/PageLayout";
+import { Div } from "./homestyle";
+
+
 const Home = () => {
   return (
-    <div>
+    <PageLayout>
+    <Div>
       <h1>Home</h1>
-    </div>
+    </Div>
+    </PageLayout>
   );
 };
 
