@@ -1,21 +1,11 @@
-import { Routes, Route } from "react-router-dom";
-import { routes } from "./routes";
-function App() {
+import React from 'react';
+
+const App = () => {
   return (
-    <div className="App">
-      <Routes>
-        {routes.map((route) => {
-          return (
-            <Route
-              path={route.path}
-              element={route.component}
-              key={route._id}
-            />
-          );
-        })}
-      </Routes>
+    <div>
+      <h1>Hello!</h1>
     </div>
   );
-}
+};
 
 export default App;
