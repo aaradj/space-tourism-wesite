@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import { Fspliter } from "../../helper";
 interface Lists {
   path: string;
   name: string;
@@ -36,7 +37,7 @@ const lists: Lists[] = [
 const Navbar = () => {
   const location = useLocation();
   const [close, setClose] = useState(true);
-//styles
+  //styles
   const Header = styled.header`
     width: 100%;
     height: 5vh;
@@ -193,7 +194,9 @@ const Navbar = () => {
               <li
                 style={{
                   borderBottom: `${
-                    location.pathname === list.path ? "4px solid white" : null
+                    Fspliter(location.pathname) === Fspliter(list.path)
+                      ? "4px solid white"
+                      : null
                   }`,
                 }}
                 key={list._id}

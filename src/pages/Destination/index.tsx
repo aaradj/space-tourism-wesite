@@ -1,13 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import PageLayout from "../../components/PageLayout";
-import { Div } from "./destinationstyle";
+import { Div, Nav } from "./destinationstyle";
 import Europa from "./Europa";
 import Mars from "./Mars";
 import Moon from "./Moon";
 import Titan from "./Titan";
 export interface Lists {
   name: string;
-  component: any;
+  component?: any;
   path: string;
   location: string;
   _id: number;
@@ -104,15 +104,20 @@ const Destination = () => {
   return (
     <PageLayout>
       <Div>
-        <ul>
-          {lists.map((list) => {
-            return (
-              <li key={list._id}>
-                <Link to={list.path}>{list.name}</Link>
-              </li>
-            );
-          })}
-        </ul>
+        <Nav>
+          <h2 className="title">
+            <span>01</span> Pick Your Destination
+          </h2>
+          <ul>
+            {lists.map((list) => {
+              return (
+                <li key={list._id}>
+                  <Link to={list.path}>{list.name}</Link>
+                </li>
+              );
+            })}
+          </ul>
+        </Nav>
         {lists.map((list) => {
           return list.location === location.pathname ? list.component : null;
         })}
@@ -120,5 +125,4 @@ const Destination = () => {
     </PageLayout>
   );
 };
-
 export default Destination;
