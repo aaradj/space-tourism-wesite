@@ -27,5 +27,4 @@ const Home = () => {
     </PageLayout>
   );
 };
-
 export default Home;

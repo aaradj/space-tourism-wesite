@@ -1,16 +1,15 @@
-import React from 'react';
-import styled from "styled-components"
 
-const Container = styled.div`
-color:white;
-background:black;
-`
+import { DataProps } from "..";
 
-const Mars = () => {
+const Mars = ({name,img,description,distance,travel}:DataProps) => {
     return (
-        <Container>
-            <h1>Mars</h1>
-        </Container>
+        <div>
+        <h1>{name}</h1>
+        <p>{description}</p>
+        <p>{distance}</p>
+        <p>{travel}</p>
+        <img src={img} alt="mars" />
+      </div>
     );
 };
 

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
-
 interface Lists {
   path: string;
   name: string;
@@ -34,11 +33,10 @@ const lists: Lists[] = [
     _id: 4,
   },
 ];
-
 const Navbar = () => {
   const location = useLocation();
   const [close, setClose] = useState(true);
-
+//styles
   const Header = styled.header`
     width: 100%;
     height: 5vh;
@@ -81,7 +79,6 @@ const Navbar = () => {
       }
     }
   `;
-
   const Nav = styled.div`
     .menu {
       display: none;
@@ -122,7 +119,6 @@ const Navbar = () => {
     height: 100%;
     @media (max-width: 1300px) {
       width: 70%;
-
       ul {
         li {
           padding: 2.3rem 0.7rem;
@@ -152,8 +148,7 @@ const Navbar = () => {
         ${close
           ? `transform:translateX(180%);
         `
-          : `transform:translateX(0);
-          
+          : `transform:translateX(0);   
 `}
         li {
           padding: 1rem;
@@ -163,7 +158,6 @@ const Navbar = () => {
       height: 100vh;
     }
   `;
-
   return (
     <Header>
       <div className="logo">
@@ -215,5 +209,4 @@ const Navbar = () => {
     </Header>
   );
 };
-
 export default Navbar;

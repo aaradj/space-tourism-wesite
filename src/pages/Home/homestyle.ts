@@ -1,9 +1,7 @@
 import styled from "styled-components";
-
 const bgDeskTop = require("../../assets/home/background-home-desktop.jpg");
 const bgTablet = require("../../assets/home/background-home-tablet.jpg");
 const bgMobile = require("../../assets/home/background-home-mobile.jpg");
-
 const Div = styled.div`
   width: 100%;
   height: 100vh;
@@ -99,7 +97,6 @@ const Texts = styled.div`
   }
   }
 `;
-
 const ExploreLogo = styled.div`
   width: 50%;
   display: flex;
@@ -137,5 +134,4 @@ const ExploreLogo = styled.div`
   }
   
 `;
-
 export { Div, Texts, ExploreLogo };
