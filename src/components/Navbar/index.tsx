@@ -86,6 +86,9 @@ const Navbar = () => {
     .menu {
       display: none;
     }
+    .menu-close {
+      display: none;
+    }
     ul {
       display: flex;
       align-items: center;
@@ -133,6 +136,9 @@ const Navbar = () => {
       }
     }
     @media (max-width: 700px) {
+      .menu-close {
+        display: block;
+      }
       .menu {
         display: block;
         position: absolute;
@@ -179,7 +185,7 @@ const Navbar = () => {
         </div>
         <ul>
           {close ? null : (
-            <div onClick={() => setClose(!close)}>
+            <div className="menu-close" onClick={() => setClose(!close)}>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25">
                 <g fill="#D0D6F9" fillRule="evenodd">
                   <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
@@ -196,10 +202,9 @@ const Navbar = () => {
                     location.pathname === list.path ? "4px solid white" : null
                   }`,
                 }}
-                onClick={() => setClose(!close)}
                 key={list._id}
               >
-                <Link to={list.path}>
+                <Link to={list.path} onClick={() => setClose(!close)}>
                   <span>{list.number}</span> {list.name}
                 </Link>
               </li>

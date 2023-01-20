@@ -32,7 +32,6 @@ const Div = styled.div`
     padding: 8rem 1rem 0 1rem;
   }
 `;
-
 const Texts = styled.div`
   display: flex;
   flex-direction: column;
