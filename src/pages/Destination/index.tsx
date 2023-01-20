@@ -12,7 +12,6 @@ export interface Lists {
   location: string;
   _id: number;
 }
-
 export interface DataProps {
   name: string;
   description: string;
@@ -20,12 +19,10 @@ export interface DataProps {
   travel: string;
   img: any;
 }
-
 const moon = require("../../assets/destination/image-moon.png");
 const mars = require("../../assets/destination/image-mars.png");
 const europa = require("../../assets/destination/image-europa.png");
 const titan = require("../../assets/destination/image-titan.png");
-
 const lists: Lists[] = [
   {
     name: "Moon",
@@ -101,9 +98,6 @@ const lists: Lists[] = [
     _id: 4,
   },
 ];
-
-
-
 const Destination = () => {
   const location = useLocation();
   console.log(location.pathname);
