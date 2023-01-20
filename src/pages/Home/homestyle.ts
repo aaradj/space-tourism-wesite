@@ -8,7 +8,6 @@ const Div = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   background: url(${bgDeskTop});
   background-position: center;
@@ -16,7 +15,7 @@ const Div = styled.div`
   background-repeat: repeat;
   background-attachment: fixed;
   color: white;
-  padding-top: 10rem;
+  padding:10rem 10rem 0 10rem;
   @media (max-width: 1300px) {
     background: url(${bgTablet});
     background-repeat: no-repeat;
@@ -31,4 +30,56 @@ const Div = styled.div`
   }
 `;
 
-export { Div };
+const Texts = styled.div`
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+
+  width:50%;
+  .text{
+    font-family: BenchNine;
+    font-size:2rem;
+    font-weight:400;
+    color:rgb(199, 204, 208);
+    letter-spacing:.2rem;
+    text-transform:uppercase;
+  }
+  h1{
+    font-size:10rem;
+    text-transform:uppercase;
+    font-weight:300;
+    color:white;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .paragraph{
+    letter-spacing:0.5px;
+    line-height:2rem;
+    font-size:1.2rem;
+    color:rgb(199, 204, 208);
+  }
+  div{
+    margin-bottom:2rem;
+  }
+`
+
+const ExploreLogo = styled.div`
+width:50%;
+display:flex;
+justify-content:center;
+div{
+width:300px;
+height:300px;
+border-radius: 100%;
+background:white;
+color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:2.5rem;
+color:rgb(37, 36, 36);
+text-transform:uppercase;
+font-family: 'Times New Roman', Times, serif;
+}
+`
+
+export { Div , Texts , ExploreLogo };
