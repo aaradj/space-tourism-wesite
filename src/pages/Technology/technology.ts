@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const bgDeskTop = require("../../assets/home/background-home-desktop.jpg");
-const bgTablet = require("../../assets/home/background-home-tablet.jpg");
-const bgMobile = require("../../assets/home/background-home-mobile.jpg");
+const bgDeskTop = require("../../assets/technology/background-technology-desktop.jpg");
+const bgTablet = require("../../assets/technology/background-technology-tablet.jpg");
+const bgMobile = require("../../assets/technology/background-technology-mobile.jpg");
 
 const Div = styled.div`
   width: 100%;
@@ -23,7 +23,7 @@ const Div = styled.div`
     background-position: center;
     background-size: cover;
   }
-  @media (max-width:700px){
+  @media (max-width: 700px) {
     background: url(${bgMobile});
     background-repeat: no-repeat;
     background-position: center;
