@@ -111,7 +111,16 @@ const Destination = () => {
           <ul>
             {lists.map((list) => {
               return (
-                <li key={list._id}>
+                <li
+                  key={list._id}
+                  style={{
+                    borderBottom: `${
+                      list.location === location.pathname
+                        ? "2px solid white"
+                        : "inherit"
+                    }`,
+                  }}
+                >
                   <Link to={list.path}>{list.name}</Link>
                 </li>
               );

@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import PageLayout from "../../components/PageLayout";
-import { Div } from "./crewstyle";
+import { Div, TextTitle } from "./crewstyle";
 import Anousheh from "./Anousheh";
 import Douglas from "./Douglas";
 import Mark from "./Mark";
@@ -93,21 +93,32 @@ const Crew = () => {
   return (
     <PageLayout>
       <Div>
+        <TextTitle>
+          <p>
+            <span>02</span> meet your crew
+          </p>
+        </TextTitle>
         {crewList.map((list) => {
           return list.location === location.pathname ? list.component : null;
         })}
-        {crewList.map((list) => {
-          return (
-            <ul key={list._id}>
-              <li>
-                <Link to={list.link}>{list.name}</Link>
+        <ul>
+          {crewList.map((list) => {
+            return (
+              <li key={list._id}>
+                <Link
+                  style={{
+                    background: `${
+                      list.location === location.pathname ? "white" : "inherit"
+                    }`,
+                  }}
+                  to={list.link}
+                ></Link>
               </li>
-            </ul>
-          );
-        })}
+            );
+          })}
+        </ul>
       </Div>
     </PageLayout>
   );
 };
-
 export default Crew;

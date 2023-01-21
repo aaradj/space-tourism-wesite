@@ -1,13 +1,24 @@
-import React from "react";
+import { Container } from "../crewstyle";
 
 const Victor = ({ data }: any) => {
+  const { name, image, role, bio } = data;
   return (
-    <div>
-      <h1>{data.name}</h1>
-      <p>{data.bio}</p>
-      <img src={data.image} alt={data.name} />
-    </div>
+    <Container>
+      <div className="description">
+        <div>
+          <p className="role">{role}</p>
+        </div>
+        <div>
+          <h3>{name}</h3>
+        </div>
+        <div>
+          <p className="bio">{bio}</p>
+        </div>
+      </div>
+      <div className="image">
+        <img src={image} alt={name} />
+      </div>
+    </Container>
   );
 };
-
 export default Victor;

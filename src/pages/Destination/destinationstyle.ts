@@ -7,7 +7,7 @@ const bgMobile = require("../../assets/destination/background-destination-mobile
 const Div = styled.div`
   color: white;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,18 +18,13 @@ const Div = styled.div`
   background-attachment: fixed;
   padding-top: 10rem;
   @media (max-width: 1300px) {
-    background: url(${bgTablet});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 5rem;
+    padding: 5rem 0 1rem 0;
   }
   @media (max-width: 700px) {
-    background: url(${bgMobile});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     padding-top: 3rem;
+  }
+  @media (max-height:700px){
+    height:fit-content;
   }
 `;
 
@@ -39,7 +34,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: space-evenly;
   .title {
-    padding-bottom:2rem;
+    padding-bottom: 2rem;
     width: 50%;
     align-self: start;
     text-align: center;
@@ -76,7 +71,7 @@ const Nav = styled.div`
     .title {
       font-size: 1.5rem;
       width: 100%;
-      margin:0;
+      margin: 0;
     }
     ul {
       width: 100%;
@@ -92,7 +87,7 @@ const Nav = styled.div`
 
   @media (max-width: 700px) {
     .title {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
     }
     ul {
       li {

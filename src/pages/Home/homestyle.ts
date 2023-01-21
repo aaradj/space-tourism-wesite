@@ -4,7 +4,7 @@ const bgTablet = require("../../assets/home/background-home-tablet.jpg");
 const bgMobile = require("../../assets/home/background-home-mobile.jpg");
 const Div = styled.div`
   width: 100%;
-  height: 100vh;
+  height:100vh;
   display: flex;
   align-items: center;
   background: url(${bgDeskTop});
@@ -28,6 +28,9 @@ const Div = styled.div`
     background-position: center;
     background-size: cover;
     padding: 8rem 1rem 0 1rem;
+  }
+  @media (max-height:700px){
+    height:fit-content;
   }
 `;
 const Texts = styled.div`

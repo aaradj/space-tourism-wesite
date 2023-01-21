@@ -29,6 +29,9 @@ const Div = styled.div`
     background-position: center;
     background-size: cover;
   }
+  // @media (max-height:700px){
+  //   height:fit-content;
+  // }
 `;
 
 export { Div };
