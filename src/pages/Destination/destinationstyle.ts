@@ -23,7 +23,7 @@ const Div = styled.div`
   @media (max-width: 700px) {
     padding-top: 3rem;
   }
-  @media (max-height:700px){
+  @media (max-height:820px){
     height:fit-content;
   }
 `;
