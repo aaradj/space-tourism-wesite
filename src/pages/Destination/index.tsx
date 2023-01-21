@@ -7,7 +7,7 @@ import Moon from "./Moon";
 import Titan from "./Titan";
 export interface Lists {
   name: string;
-  component?: any;
+  component: any;
   path: string;
   location: string;
   _id: number;
@@ -23,7 +23,7 @@ const moon = require("../../assets/destination/image-moon.png");
 const mars = require("../../assets/destination/image-mars.png");
 const europa = require("../../assets/destination/image-europa.png");
 const titan = require("../../assets/destination/image-titan.png");
-const lists: Lists[] = [
+export const lists: Lists[] = [
   {
     name: "Moon",
     path: "../destination/moon",

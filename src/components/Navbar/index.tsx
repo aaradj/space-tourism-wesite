@@ -22,7 +22,7 @@ const lists: Lists[] = [
     _id: 2,
   },
   {
-    path: "/crew",
+    path: "/crew/douglas",
     name: "crew",
     number: "02",
     _id: 3,
