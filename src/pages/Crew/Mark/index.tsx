@@ -15,8 +15,8 @@ const Mark = ({ data }: any) => {
         </div>
       </div>
       <div className="image">
-        <img src={image} alt={name} />
-      </div>
+        <img loading="lazy" src={image} alt={name} />
+      </div> 
     </Container>
   );
 };

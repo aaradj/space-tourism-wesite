@@ -5,7 +5,7 @@ const Mars = ({ name, img, description, distance, travel }: DataProps) => {
   return (
     <Container>
       <Image>
-        <img src={img} alt={name} />
+        <img loading="lazy" src={img} alt={name} />
       </Image>
       <Text>
         <div className="description">

@@ -16,7 +16,7 @@ const Victor = ({ data }: any) => {
         </div>
       </div>
       <div className="image">
-        <img src={image} alt={name} />
+        <img loading="lazy" src={image} alt={name} />
       </div>
     </Container>
   );

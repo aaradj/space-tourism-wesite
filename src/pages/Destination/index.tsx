@@ -24,25 +24,7 @@ const mars = require("../../assets/destination/image-mars.png");
 const europa = require("../../assets/destination/image-europa.png");
 const titan = require("../../assets/destination/image-titan.png");
 export const lists: Lists[] = [
-  {
-    name: "Mars",
-    link: "../destination/mars",
-    location: "/destination/mars",
-    _id: 2,
 
-    component: (
-      <Mars
-        key={2}
-        img={mars}
-        name={"mars"}
-        description={
-          "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"
-        }
-        distance={"225 mil. km"}
-        travel={"9 months"}
-      />
-    ),
-  },
   {
     name: "Moon",
     link: "../destination/moon",
@@ -59,6 +41,25 @@ export const lists: Lists[] = [
         }
         distance={"384,400 km"}
         travel={"3 days"}
+      />
+    ),
+  },
+  {
+    name: "Mars",
+    link: "../destination/mars",
+    location: "/destination/mars",
+    _id: 2,
+
+    component: (
+      <Mars
+        key={2}
+        img={mars}
+        name={"mars"}
+        description={
+          "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"
+        }
+        distance={"225 mil. km"}
+        travel={"9 months"}
       />
     ),
   },
