@@ -24,8 +24,11 @@ const Div = styled.div`
   @media (max-width: 700px) {
     padding-top: 3rem;
   }
-  @media (max-height:900px){
-    height:fit-content;
+  @media (max-height: 920px) {
+    height: fit-content;
+  }
+  @media(min-height:850px){
+    padding-bottom:2rem;
   }
 `;
 
