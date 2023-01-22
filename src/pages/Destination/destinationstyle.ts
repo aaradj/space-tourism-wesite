@@ -7,6 +7,7 @@ const bgMobile = require("../../assets/destination/background-destination-mobile
 const Div = styled.div`
   color: white;
   width: 100%;
+
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,6 +31,7 @@ const Div = styled.div`
 
 const Nav = styled.div`
   margin: 3rem 0 3rem 0;
+  z-index:0;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -59,6 +61,7 @@ const Nav = styled.div`
     li {
       padding: 0 2rem;
       a {
+        z-index:1;
         font-family: BenchNine;
         font-size: 1.5rem;
         text-transform: uppercase;

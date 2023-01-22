@@ -8,7 +8,7 @@ import Titan from "./Titan";
 export interface Lists {
   name: string;
   component: any;
-  path: string;
+  link: string;
   location: string;
   _id: number;
 }
@@ -25,8 +25,27 @@ const europa = require("../../assets/destination/image-europa.png");
 const titan = require("../../assets/destination/image-titan.png");
 export const lists: Lists[] = [
   {
+    name: "Mars",
+    link: "../destination/mars",
+    location: "/destination/mars",
+    _id: 2,
+
+    component: (
+      <Mars
+        key={2}
+        img={mars}
+        name={"mars"}
+        description={
+          "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"
+        }
+        distance={"225 mil. km"}
+        travel={"9 months"}
+      />
+    ),
+  },
+  {
     name: "Moon",
-    path: "../destination/moon",
+    link: "../destination/moon",
     location: "/destination/moon",
     _id: 1,
 
@@ -44,25 +63,11 @@ export const lists: Lists[] = [
     ),
   },
   {
-    name: "Mars",
-    component: (
-      <Mars
-        key={2}
-        img={mars}
-        name={"mars"}
-        description={
-          "Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!"
-        }
-        distance={"225 mil. km"}
-        travel={"9 months"}
-      />
-    ),
-    path: "../destination/mars",
-    location: "/destination/mars",
-    _id: 2,
-  },
-  {
     name: "Europa",
+    link: "../destination/europa",
+    location: "/destination/europa",
+    _id: 3,
+
     component: (
       <Europa
         key={3}
@@ -75,12 +80,13 @@ export const lists: Lists[] = [
         travel={"3 years"}
       />
     ),
-    path: "../destination/europa",
-    location: "/destination/europa",
-    _id: 3,
   },
   {
     name: "Titan",
+    link: "../destination/titan",
+    location: "/destination/titan",
+    _id: 4,
+
     component: (
       <Titan
         key={4}
@@ -93,9 +99,6 @@ export const lists: Lists[] = [
         travel={"7 years"}
       />
     ),
-    path: "../destination/titan",
-    location: "/destination/titan",
-    _id: 4,
   },
 ];
 const Destination = () => {
@@ -121,7 +124,9 @@ const Destination = () => {
                     }`,
                   }}
                 >
-                  <Link to={list.path}>{list.name}</Link>
+                  <Link onClick={() => console.log("linked")} to={list.link}>
+                    {list.name}
+                  </Link>
                 </li>
               );
             })}

@@ -68,6 +68,7 @@ const Main = styled.div`
   align-items: center;
   justify-content: space-between;
   ul {
+    z-index:0;
     width: 10%;
     height: 100%;
     display: grid;

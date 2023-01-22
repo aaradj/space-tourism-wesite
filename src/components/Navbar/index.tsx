@@ -39,6 +39,7 @@ const Navbar = () => {
   const [close, setClose] = useState(true);
   //styles
   const Header = styled.header`
+    z-index:${close ? "0" : "1"};
     width: 100%;
     height: 5vh;
     position: fixed;
@@ -81,6 +82,7 @@ const Navbar = () => {
     }
   `;
   const Nav = styled.div`
+    // z-index: 2;
     .menu {
       display: none;
     }
@@ -142,6 +144,7 @@ const Navbar = () => {
         right: 2rem;
       }
       ul {
+        z-index: 2;
         width: 100%;
         height: 100vh;
         flex-direction: column;
