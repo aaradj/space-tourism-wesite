@@ -27,7 +27,7 @@ const Div = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 6rem 1rem 1rem 1rem;
   }
   @media (max-height: 920px) {
     height: fit-content;
