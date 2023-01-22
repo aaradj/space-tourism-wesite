@@ -1,9 +1,7 @@
 import styled from "styled-components";
-
 const bgDeskTop = require("../../assets/technology/background-technology-desktop.jpg");
 const bgTablet = require("../../assets/technology/background-technology-tablet.jpg");
 const bgMobile = require("../../assets/technology/background-technology-mobile.jpg");
-
 const Div = styled.div`
   width: 100%;
   height: 100vh;

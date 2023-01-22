@@ -1,5 +1,5 @@
 import { DataProps } from "..";
-import { Container, Image, Text } from "../style";
+import { Container, Image, Text } from "../destinationstyle";
 
 const Mars = ({ name, img, description, distance, travel }: DataProps) => {
   return (
