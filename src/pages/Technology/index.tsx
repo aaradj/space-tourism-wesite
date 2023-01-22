@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import PageLayout from "../../components/PageLayout";
-import { Div } from "./technology";
+import { Div, Main, TextTitle } from "./technology";
 interface TechLists {
   name: string;
   image: any;
@@ -55,29 +55,60 @@ const Technology = () => {
   return (
     <PageLayout>
       <Div>
-        <ul>
-          {technologyList.map((list) => {
-            return (
-              <li key={list._id}>
-                <Link to={list.link}>{list.name}</Link>
-              </li>
-            );
-          })}
-        </ul>
-        <div>
+        <TextTitle>
+          <p>
+            <span>03</span>SPACE LOUNCH 101
+          </p>
+        </TextTitle>
+        <Main>
+          <ul>
+            {technologyList.map((list) => {
+              return (
+                <li
+                  key={list._id}
+                  style={{
+                    background: `${
+                      list.location === location.pathname ? "white" : "inherit"
+                    }`,
+                  }}
+                >
+                  <Link
+                    style={{
+                      color: `${
+                        list.location === location.pathname
+                          ? "black"
+                          : "inherit"
+                      }`,
+                    }}
+                    to={list.link}
+                  >
+                    {list._id}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
           {technologyList.map((list) => {
             return list.location === location.pathname ? (
-              <div>
-                <h3>{list.name}</h3>
-                <p>{list.description}</p>
-                <img src={list.image} alt={list.name} />
+              <div className="container">
+                <div className="text">
+                  <div className="title">
+                    <p>the technology</p>
+                    <h3>{list.name}</h3>
+                  </div>
+                  <div className="description">
+                    <p>{list.description}</p>
+                  </div>
+                </div>
+                <div className="image">
+                  <img loading="lazy" src={list.image} alt={list.name} />
+                </div>
               </div>
             ) : null;
           })}
-        </div>
+        </Main>
       </Div>
     </PageLayout>
   );
 };
-
 export default Technology;
