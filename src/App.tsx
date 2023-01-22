@@ -5,20 +5,19 @@ import { lists } from "./pages/Destination";
 import Crew, { crewList } from "./pages/Crew";
 import Destination from "./pages/Destination";
 import Home from "./pages/Home";
-import Technology from "./pages/Technology";
+import Technology, { technologyList } from "./pages/Technology";
+
 const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        {
-          crewList.map(list=>{
-            return(
-              <Route path={list.location} element={<Crew />} />
-            )
-          })
-        }
-        <Route path="/technology" element={<Technology />} />
+        {crewList.map((list) => {
+          return <Route key={list._id} path={list.location} element={<Crew />} />;
+        })}
+        {technologyList.map((list) => {
+          return <Route key={list._id} path={list.location} element={<Technology />} />;
+        })}
         {lists.map((list) => {
           return (
             <Route
